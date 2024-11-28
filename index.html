@@ -15,10 +15,7 @@
         h1{
             font-size: 50px;
         }
-        .p-container{
-            border-color: black;
-            border-radius: 10px;
-        }
+        
         #search{
            width: 300px;
            height:30px;
@@ -29,6 +26,10 @@
             margin-left: 10px;
             margin-top: 5px;
         }
+        #result{
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
@@ -40,5 +41,21 @@
         </div>
         <p id="result"></p>
     </div>
+<script>
+    const contacts={
+        Ram:"1234561234",
+        Sham:"8907667845",
+        Gita:"8790342345",
+        Sita:"2345123478",
+        Dipa:"7895467890",
+        Khandu:"5689345621"
+    }
+    function search(){
+        const input=document.getElementById("search");
+        const query=input.value.toLowerCase();
+        const mobile=contacts[query]
+        
+    }
+</script>
 </body>
 </html>
