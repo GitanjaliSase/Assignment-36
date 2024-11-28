@@ -43,18 +43,24 @@
     </div>
 <script>
     const contacts={
-        Ram:"1234561234",
-        Sham:"8907667845",
-        Gita:"8790342345",
-        Sita:"2345123478",
-        Dipa:"7895467890",
-        Khandu:"5689345621"
+        ram:"1234561234",
+        sham:"8907667845",
+        gita:"8790342345",
+        sita:"2345123478",
+        dipa:"7895467890",
+        khandu:"5689345621"
     }
     function search(){
         const input=document.getElementById("search");
         const query=input.value.toLowerCase();
         const mobile=contacts[query]
-        
+        const result=document.getElementById("result");
+        if(mobile){
+            result.innerText= `${query} : ${mobile}`;
+        }
+        else{
+            result.innerText="Contact not found";
+        }
     }
 </script>
 </body>
